@@ -13,7 +13,7 @@ func Contains(way string, searchIt string) (bool, error) {
 func searcher(content string, searchIt string) bool {
 	result := false
 	for i := 0; i < len(content); i++ {
-		if content[i] == searchIt[0] && len(searchIt) >= len(content) {
+		if content[i] == searchIt[0] && len(searchIt) <= len(content) {
 			k := i + 1
 			for j := 2; j < len(searchIt); j++ {
 				if content[k] != searchIt[j] {
