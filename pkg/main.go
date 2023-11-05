@@ -11,7 +11,6 @@ func Contains(way string, searchIt string) (bool, error) {
 }
 
 func searcher(content string, searchIt string) bool {
-	result := false
 	resultAssist := false
 	for i := 0; i < len(content); i++ {
 		if content[i] == searchIt[0] && len(searchIt) <= len(content) {
@@ -24,9 +23,9 @@ func searcher(content string, searchIt string) bool {
 				k++
 			}
 			if resultAssist == true {
-				result = true
+				return true
 			}
 		}
 	}
-	return result
+	return false
 }
